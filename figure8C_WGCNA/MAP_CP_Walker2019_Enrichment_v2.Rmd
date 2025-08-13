@@ -1,0 +1,428 @@
+---
+title: "MAP_CP_Walker2019_Enrichment"
+author: "Yung-Chun Wang"
+date: "2025-02-18"
+output: html_document
+---
+## Load Packages
+
+```{r setup, include=FALSE}
+#USE THIS COMMAND TO RUN ENTIRE SCRIPT
+#setwd("/gpfs/ysm/project/kahle/sp592/Walker2019/"); rmarkdown::render("Walker2019_Enrichment.Rmd") 
+
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(magrittr)
+library(useful)
+library(org.Hs.eg.db)
+library(HGNChelper)
+library(ggpubr)
+library(cowplot)
+library(egg)
+library(AnnotationDbi)
+library(brglm2)
+
+options(stringsAsFactors=FALSE)
+```
+
+## Reformat the RData for CP (file="MAP_CP_variants_ver20250206.csv")
+
+Inheritance model: denovo + recessive genotype(comphet, hom, xlink)
+- high confident gene: all
+- high confident + probabal: Dmis + LoF
+- high confident + probabal + human known gene: known gene
+
+```{r}
+# 0. remove all the preset dataset or variable
+rm(list=ls())
+
+# 0. Load RData
+load("~/MAP_CP_Walker2019_Enrichment.RData")
+
+# 1. Read the gene list from different group
+df <- read.csv("CP_Panel_Gene_List_YCW_v20250508.csv", stringsAsFactors = FALSE)
+
+# Get unique panel names
+Group_keyword <- "Panel"
+# Group_keyword <- "Group"
+group_names <- unique(df[[Group_keyword]])
+
+# Get Panel Groups
+control_panels <- unique(df$Panel[df$Group == "Control"])
+case_panels <- unique(df$Panel[df$Group == "Case"])
+
+# Ensure `results_list` exists; if not, initialize it
+if (!exists("results_list")) {
+  gene_list <- list()
+}
+
+# Function to get Ensembl IDs for a list of genes
+get_ensembl_ids <- function(genes) {
+  AnnotationDbi::select(
+    org.Hs.eg.db,
+    keys = genes,
+    keytype = "SYMBOL",
+    columns = "ENSEMBL"
+  )
+}
+
+# Loop through each panel name
+for (group_item in group_names) {
+  cat("\nProcessing group_item:", group_item, "\n")
+  
+  # Subset data for the current group_item
+  df_sub <- subset(df, df[[Group_keyword]] == group_item)
+  
+  # Get unique gene names
+  unique_genes <- unique(df_sub$geneName)
+  
+  # Validate gene symbols
+  valid_genes_df <- checkGeneSymbols(unique_genes)
+  
+  # Extract corrected gene symbols
+  corrected_genes <- valid_genes_df$Suggested.Symbol
+  
+  # Get Ensembl IDs
+  ensembl_data <- get_ensembl_ids(corrected_genes)
+  
+  # Convert to named vector format
+  named_vector <- setNames(ensembl_data$ENSEMBL, ensembl_data$SYMBOL)
+  
+  # Store the results in the list
+  gene_list[[group_item]] <- named_vector
+  
+  # Save each group_item's results as a separate file
+  # save(named_vector, file = paste0(group_item, "_Ensembl_Annotations.RData"))
+}
+
+# Clean up environment
+rm(df, df_sub, group_item, valid_genes_df, corrected_genes, ensembl_data, named_vector, unique_genes)
+
+# Save the complete results list
+# save(list=ls(), file = "MAP_CP_Walker2019_Enrichment.RData")
+```
+
+## Module Enrichment Functions
+
+rareVariantEnrichment calls LoadDiseaseDNVs and LoadDiseaseCNVs to get genes hit by rare de novo variants or CNVs curated from denovoDB for ASD, ID, SCZ, and developmental disorder
+
+?? May be need to include RG for those diseases
+
+```{r}
+
+.DE_NOVO_GENES <- NULL
+
+##Defining Gene sets from denovo Database (original gene sets tested in Walker 2019)
+diseases <- c("autism", "developmentalDisorder", "intellectualDisability", 
+                  "schizophrenia")
+
+classes <- c("frameshift", "frameshift-near-splice", 
+                 "splice-acceptor", "splice-donor", "start-lost", 
+                 "stop-gained", "stop-gained-near-splice", "stop-lost")
+
+for (disease in diseases) {
+  dnv.sub <- dnv.db %>% filter(PrimaryPhenotype == disease & FunctionClass %in% classes)
+  .DE_NOVO_GENES[[disease]] <- dnv.sub %>% filter(!is.na(ENSEMBL.ID)) %>% filter(!duplicated(Alternate.Gene.Name)) %$% setNames(ENSEMBL.ID, Alternate.Gene.Name)
+}
+
+# Add CP Panel gene_list genes into .DE_NOVO_GENES
+for (panel in names(gene_list)) {
+  .DE_NOVO_GENES[[panel]] <- gene_list[[panel]]
+}
+
+##Defining Gene sets tested for HydroV2 paper: autism and DDD papers
+.DE_NOVO_GENES[["autism.ruzzo.biorxiv"]] <- autism.ruzzo.biorxiv
+.DE_NOVO_GENES[["DDD"                 ]] <- DDD
+
+.CNV_GENES <- NULL
+
+.CNV_GENES[["autism"       ]] <- Gandal18.ASD_CNV.genes
+.CNV_GENES[["schizophrenia"]] <- Gandal18.SCZ_CNV.genes
+
+dnv.genes <- .DE_NOVO_GENES
+cnv.genes <- .CNV_GENES
+comb.genes <- list()
+for (d in union( names(cnv.genes), names(dnv.genes) ) ) {
+  comb.genes[[d]] <- union( cnv.genes[[d]] , dnv.genes[[d]] )
+}
+
+##Function for Module Enrichment (Walker 2019)
+rareVariantEnrichment<-function (gene.names, mod.colors, gene.covars, background.module = NULL, 
+          competitive = F, verbose = T, symbol.type = "ensembl", resource.dir = ".") 
+{
+  if (background.module %>% is.null) {
+    mtab <- table(mod.colors)
+    background.module <- names(mtab)[which.max(mtab)]
+  }
+
+  mod.matrix <- model.matrix(~. - 1, data = data.frame(module = mod.colors) )
+  colnames(mod.matrix) <- gsub("module", "", colnames(mod.matrix) )
+  rownames(mod.matrix) <- gene.names
+  mod.matrix <- cbind(mod.matrix, gene.covars)
+  for (d in names(comb.genes) ) {
+    dmat <- data.frame(
+      foo = gene.names %>% sapply( function(g) { 1 * (g %in% comb.genes[[d]]) })
+      )
+    colnames(dmat) <- d
+    mod.matrix <- cbind(mod.matrix, dmat)
+  }
+  covar.comp <- paste( colnames(gene.covars) , collapse = " + ")
+  results <- NULL
+  if (competitive) {
+    modnames <- paste( unique(mod.colors) , collapse = " + ")
+    for (dis in names(comb.genes) ) {
+      glm.fla <- sprintf("%s ~ 1 + %s + %s - %s", dis, modnames, covar.comp, background.module)
+      if (verbose) {
+        print(glm.fla)
+      }
+      lm.res <- formula(glm.fla) %>% glm(
+        data    = mod.matrix, 
+        family  = binomial(link = "logit"),
+        control = glm.control(maxit = 100)
+        )
+      coefs <- summary(lm.res)$coefficients
+      mod.idx <-  which( rownames(coefs) %in% mod.colors )
+      pvals <- coefs[, 3] %>% sapply( function(z) { pt(z, df = summary(lm.res)$df.residual, lower.tail = F) })
+      dis.res <- data.frame(module  = rownames(coefs)[mod.idx], 
+                            disease = dis,
+                            beta    = coefs[mod.idx, 1],
+                            se      = coefs[mod.idx, 2],
+                            p       = pvals[mod.idx]
+                            )
+      results <- rbind(results, dis.res)
+    }
+  }
+  else {
+    for (modname in unique(mod.colors) ) {
+      for (dis in names(comb.genes) ) {
+        glm.fla <- sprintf("%s ~ 1 + %s + %s", modname, dis, covar.comp)
+        if (verbose) {
+          print(glm.fla)
+        }
+        lm.res <-  formula(glm.fla) %>% glm(
+          data = mod.matrix, 
+          family = binomial(link = "logit"),
+          control = glm.control(maxit = 100)
+          )
+        coefs <- summary(lm.res)$coefficients
+        pval <- coefs[2, 3] %>% pt(
+          df = summary(lm.res)$df.residual, 
+          lower.tail = F)
+        res.row <- data.frame(
+          module = modname,
+          disease = dis, 
+          beta = coefs[2, 1],
+          se = coefs[2, 2],
+          p = pval)
+        results <- rbind(results, res.row)
+      }
+    }
+  }
+  rownames(results) <- NULL
+  results
+}
+
+# Clean up environment
+rm(d, disease, panel)
+```
+
+## Celltype Enrichment Function
+
+```{r}
+
+##Defining Cell Type Markers from Polioudakis scRNA-seq atlas
+CELL_TYPE_GENES_ <- NULL
+
+for (cluster in genes.enriched$Cluster %>% unique ) {
+  CELL_TYPE_GENES_[[cluster]] <- genes.enriched %>% filter(Cluster == cluster ) %$% Ensembl %>% unique
+}
+
+
+##Function for CellType Enrichment (Walker 2019) #NOTE: original code tested module-celltype enrichment; here, we replace module lists with disease lists for disease-celltype enrichments. Accordingly, every variable named with "module" should be interpreted as variables pertaining to "disease gene lists"
+FitGLMRobust <- function (formula, data, family = binomial(link = "logit"), verbose = FALSE) {
+    glmres <- NULL
+
+    # Try Firth's logistic regression first (more stable for small sample sizes)
+    glmres <- tryCatch({
+        if (verbose) print("Trying Firth's logistic regression (brglm2)...")
+        brglm(formula, data = data, family = family, method = "brglm.fit")
+    }, error = function(e) {
+        warning("BRGLM2 failed, falling back to standard GLM...")
+        NULL
+    })
+
+    # If brglm2 fails, fall back to standard GLM
+    if (is.null(glmres)) {
+        glmres <- tryCatch({
+            if (verbose) print("Trying standard GLM...")
+            glm(formula, data = data, family = family, control = glm.control(maxit = 50))
+        }, error = function(e) {
+            warning("Standard GLM failed. Check data for complete separation.")
+            NULL
+        })
+    }
+
+    # If both methods fail, save debug info
+    if (is.null(glmres)) {
+        save(list = ls(), file = "GOUtils.debug.rda")
+        stop("Convergence failure; see GOUtils.debug.rda")
+    }
+
+    return(glmres)
+}
+
+## call to run enrichment
+ModuleBrainCellEnrich<- function(module.indicator, module.scores, gene.covars=NULL) {
+  # Examine, based gene lists from various sources, the enrichment of the given
+  # modules for particular brain cell indicators.
+  #
+  # inputs:
+  # module.indicator - a binary (0-1) named vector (names being gene names) indicating 
+  #                    presense/absence from module
+  # module.scores    - a continuous named vector that, in the original module-celltype enrichment, indicated the module membership for each gene as a covariate (in this case of disease-celltype enrichment, variable same as module.indicator)
+  # gene.covars      - gene covariates (e.g. size, etc.). Rownames the same as `module.indicator`
+  # 
+  # Returns:
+  # a table with cell type, p-value, and odds ratio for enrichment
+  if ( ! all(names(module.indicator) == names(module.scores)) ) {
+    stop('Indicator and score gene names are not the same')
+  }
+  
+  if ( (! is.null(gene.covars)) && ! all(rownames(gene.covars) == names(module.indicator)) ) {
+    stop('Indicator and covariate gene names are not the same')
+  }
+  
+  if ( length(names(CELL_TYPE_GENES_)) == 0 ) {
+    LoadCellTypeGenes()
+  }
+  
+  enrich.results <- data.frame(
+    cell.type = c(),
+    p.ind     = c(),
+    or.ind    = c(),
+    p.score   = c(),
+    or.score  = c()
+    )
+
+  for ( ctype in names(CELL_TYPE_GENES_) ) {
+    glist <- CELL_TYPE_GENES_[[ctype]]
+    is.ctype <- 1 * (names(module.indicator) %in% glist)
+
+    if ( gene.covars %>% is.null ) {
+      df <- data.frame(
+        is.ctype=is.ctype,
+        is.module=module.indicator
+        )
+      glmres <- FitGLMRobust('is.ctype ~ is.module', data=df, family='binomial') #FitGLMRobust
+    } else {
+      df           <- gene.covars 
+      df$is.ctype  <- is.ctype
+      df$is.module <- module.indicator 
+      glmres <- FitGLMRobust('is.ctype ~ . - is.ctype', data=df, family='binomial') #FitGLMRobust
+    }
+
+    pval.id <- pnorm(
+      summary(glmres)$coefficients['is.module', 1],
+      mean=0, 
+      sd=summary(glmres)$coefficients['is.module',2],
+      lower.tail=F)
+    or.id <- exp(summary(glmres)$coefficients['is.module', 1])
+
+    if ( is.null(gene.covars) ) {
+      df <- data.frame(is.ctype=is.ctype, mod.score=module.scores)
+      glmres <- FitGLMRobust('is.ctype ~ mod.score', data=df, family='binomial') #FitGLMRobust
+    } else {
+      df <- gene.covars 
+      df$is.ctype <- is.ctype
+      df$mod.score <- module.scores 
+      glmres <- FitGLMRobust('is.ctype ~ . - is.ctype', data=df, family='binomial') #FitGLMRobust
+    }
+
+    RMD <- mean(module.scores[is.ctype]) - mean(module.scores[!is.ctype])
+    pval.score <- pnorm(summary(glmres)$coefficients['mod.score', 1], mean=0, 
+                        sd=summary(glmres)$coefficients['mod.score',2], lower.tail=F)
+    or.score <- exp(RMD * summary(glmres)$coefficients['mod.score',1]) 
+    mod.res <- data.frame(
+      cell.type = ctype,
+      p.ind = pval.id,
+      or.ind = or.id,
+      p.score=pval.score,
+      or.score=or.score
+      )
+    enrich.results <- rbind(enrich.results, mod.res)
+  }
+
+  N_TESTS = nrow(enrich.results)
+  enrich.results$fdr.ind <- p.adjust(enrich.results$p.ind, method='bonferroni', N_TESTS)
+  enrich.results$fdr.score <- p.adjust(enrich.results$p.score, method='bonferroni', N_TESTS)
+  enrich.results$term <- enrich.results$cell.type
+  enrich.results
+}
+```
+
+## Running the Enrichment Analysis to Obtain P-values
+
+```{r}
+##RUNNING DISEASE-MODULE ENRICHMENT
+mod.df <- as.data.frame(gene.colors) #Module Colors for Each Gene
+mod.df$gene <- rownames(mod.df) #Module Genes
+colnames(mod.df)[1] <- "module"
+
+genes    <- mod.df$gene
+modules  <- mod.df$module
+covs     <- gene.covars #covariates include size, GC content, and mean expression in bulk atlas
+data.dir <- getwd()
+
+# Standardize continuous covariates & add noise before running enrichment
+gene.covars <- as.data.frame(scale(gene.covars))  
+
+# Generate dis.res
+dis.res <- rareVariantEnrichment(genes, modules, covs, 
+                                 background.module = 'grey', competitive = T, 
+                                 resource.dir = data.dir) ##resource.dir where devoDB file is located
+
+# Add tiny noise to prevent perfect separation
+dis.res$is.module <- as.numeric(dis.res$module %in% unique(dis.res$module))  # Create is.module (0/1)
+dis.res$mod.score <- dis.res$beta  # Set mod.score from beta values
+
+if (nrow(dis.res) > 0) {
+    dis.res$is.module <- dis.res$is.module + rnorm(nrow(dis.res), mean = 0, sd = 0.0001)
+    dis.res$mod.score <- dis.res$mod.score + rnorm(nrow(dis.res), mean = 0, sd = 0.0001)
+} else {
+    warning("`dis.res` is empty. Skipping noise addition.")
+}
+
+##adding P value corrections and graphical labels
+dis.res.transform <- NULL
+
+for (gene.set in unique(dis.res$disease) ) {
+  dis.res.transform[[gene.set]] <- dis.res %>% filter(disease == gene.set)
+  dis.res.transform[[gene.set]]$fdr <- dis.res.transform[[gene.set]]$p %>% p.adjust(method="bonferroni", n = unique(dis.res$module) %>% length )
+  dis.res.transform[[gene.set]]$fdr.transform <- -log10(dis.res.transform[[gene.set]]$fdr)
+  dis.res.transform[[gene.set]]$p.transform   <- -log10(dis.res.transform[[gene.set]]$p)
+}
+
+##Final enrichment results for disease-module enrichments
+dis.res <- bind_rows(dis.res.transform) 
+
+#######################################
+
+##RUNNING DISEASE-CELLTYPE ENRICHMENT
+hydro.cell.type <- NULL
+
+for (i in names(.DE_NOVO_GENES) ) {
+  gene.set <- .DE_NOVO_GENES[[i]]
+  hydro.ind <- { background %in% gene.set } %>% ifelse(1, 0) %>% setNames( background )
+  hydro.scores <- hydro.ind
+  hydro.cell.type[[i]] <- ModuleBrainCellEnrich(hydro.ind, hydro.scores, gene.covars= sc.covars) %>% mutate(disease = i) #gene.covars = sc.covars
+}
+
+##adding P value corrections and graphical labels
+hydro.cell.type <- bind_rows(hydro.cell.type)
+hydro.cell.type$fdr.transform <- -log10(hydro.cell.type$fdr.ind)
+hydro.cell.type$p.transform   <- -log10(hydro.cell.type$p.ind)
+##Yields final enrichment results for disease-celltype enrichments
+
+
+save.image(file = "MAP_CP_Walker2019_Results.RData") #Main Output File
+```
