@@ -1,0 +1,1000 @@
+ID	CHR:POS:REF>ALT	Gene	Type	Variant Class	RefSeq Trascript ID	Trasncript Change	AA change	MetaSVM Pred	CADD Score v1.6	MAF (bravo v8)	MAF (gnomAD v3.0)	pLI (gnomAD v4.0)	mis_z (gnomAD v4.0)	Top Candidate	Gene Category	PredominantMotorDisorder								
+F1101	chr1:19197969:G>A	UBR4	De novo	syn	NM_020765	c.C729T	p.N243N	.	6.501	6.57E-06	6.57E-06	1.00E+00	8.44E+00	.	.	Hypotonic 								
+F1101	chr8:23163924:C>T	TNFRSF10D	De novo	stopgain	NM_003840	c.G12A	p.W4X	.	26.3	0.00E+00	0.00E+00	4.18E-06	4.32E-02	.	.	Hypotonic 								
+F1105	chr16:677921:G>A	RHBDL1	De novo	misD	NM_001278720	c.G991A	p.E331K	T	26.4	1.31E-05	1.31E-05	1.76E-05	5.78E-01	.	.	Spastic								
+F1108	chr12:6970932:G>A	EMG1	De novo	syn	NM_006331	c.G9A	p.A3A	.	8.834	0.00E+00	0.00E+00	6.63E-06	5.91E-01	.	.	Not available								
+F1108	chr7:90225184:T>TGACCAAGGAAGGTCACTGTAG	STEAP2	De novo	stopgain	NM_001244946	c.102_103insGACCAAGGAAGGTCACTGTAG	p.V35_L418delinsDQGRS	.	32	0.00E+00	0.00E+00	1.59E-06	1.43E+00	.	.	Not available								
+F1109	chr1:226065802:C>T	H3-3A	De novo	misD	NM_002107	c.C275T	p.A92V	D	24.7	0.00E+00	0.00E+00	.	.	Yes	Known	Ataxic 								
+F1110	chr8:141192649:C>T	DENND3	De novo	misD	NM_014957	c.C3421T	p.R1141W	T	23.7	1.97E-05	1.97E-05	1.60E-16	2.71E+00	.	.	Spastic								
+F1111	chr4:118318487:T>C	PRSS12	De novo	syn	NM_003619	c.A1041G	p.V347V	.	4.378	6.57E-06	6.57E-06	6.58E-23	1.32E-01	.	.	Hypotonic								
+F1112	chr1:207072285:C>T	PFKFB2	De novo	misD	NM_006212	c.C1432T	p.R478C	T	25.2	0.00E+00	0.00E+00	5.42E-10	2.92E+00	.	.	Spastic								
+F1114	chr16:84196140:C>T	ADAD2	De novo	syn	NM_139174	c.C1542T	p.H514H	.	0.018	0.00E+00	0.00E+00	4.10E-25	-4.68E+00	.	.	Dyskinetic-Dystonia								
+F1114	chr19:3733893:C>T	TJP3	De novo	syn	NM_001267561	c.C885T	p.S295S	.	0.781	6.57E-06	6.57E-06	7.95E-26	-7.61E-01	.	.	Dyskinetic-Dystonia								
+F1115	chr2:151631294:A>G	NEB	De novo	misD	NM_001271208	c.T9467C	p.I3156T	T	19.45	5.92E-05	5.92E-05	1.83E-52	2.29E+00	.	.	Hypotonic								
+F1119	chr15:101384322:C>CT	PCSK6	De novo	frameshift insertion	NM_138325	c.1413dupA	p.V472Sfs*2	.	29.3	0.00E+00	0.00E+00	3.10E-20	2.71E-01	.	.	Spastic								
+F1119	chr1:149905940:C>G	SV2A	De novo	misD	NM_014849	c.G1985C	p.S662T	T	21.8	0.00E+00	0.00E+00	8.81E-01	1.85E+00	.	.	Spastic								
+F1119	chr1:160186306:C>A	ATP1A4	De novo	stopgain	NM_144699	c.C3000A	p.Y1000X	.	37	0.00E+00	0.00E+00	9.50E-05	5.42E-01	.	.	Spastic								
+F1213	chr2:215404444:G>A	FN1	De novo	syn	NM_212482	c.C3198T	p.L1066L	.	0.307	3.94E-05	3.94E-05	1.00E+00	3.64E+00	.	.	Spastic								
+F1213	chr4:109659059:C>A	MCUB	De novo	mis	NM_017918	c.C148A	p.H50N	T	7.712	0.00E+00	0.00E+00	1.18E-01	4.33E-01	.	.	Spastic								
+F1216	chr2:178548739:C>T	TTN	De novo	misD	NM_001267550	c.G92887A	p.D30963N	T	24.3	0.00E+00	0.00E+00	1.34E-58	7.24E+00	.	.	Hypotonic								
+F1217	chrX:154031078:G>GC	MECP2	De novo	frameshift insertion	NM_001369391	c.470dupG	p.G159Rfs*7	.	27.1	0.00E+00	0.00E+00	.	.	Yes	Known	Hypotonic 								
+F1217	chr1:111982012:C>T	KCND3	De novo	misD	NM_172198	c.G715A	p.V239M	D	23.7	0.00E+00	0.00E+00	1.00E+00	4.89E+00	.	.	Hypotonic 								
+F1217	chr3:119730266:C>T	MAATS1	De novo	misD	NM_033364	c.C907T	p.R303C	T	26.8	1.97E-05	1.97E-05	.	.	.	.	Hypotonic 								
+F1218	chr2:32463294:GTC>G	BIRC6	De novo	frameshift deletion	NM_016252	c.4855_4856del	p.H1622Cfs*70	.	33	0.00E+00	0.00E+00	1.00E+00	2.60E+00	.	.	Spastic								
+F1218	chr9:128613402:G>A	SPTAN1	De novo	misD	NM_001363759	c.G5065A	p.E1689K	T	23.4	0.00E+00	0.00E+00	1.00E+00	7.95E+00	.	.	Spastic								
+F1220	chr16:57769723:C>T	KIFC3	De novo	misD	NM_001318714	c.G673A	p.V225I	T	20.2	9.20E-05	9.20E-05	4.43E-10	2.16E+00	.	.	Not available								
+F1220	chr4:174310007:T>G	CEP44	De novo	misD	NM_001145314	c.T836G	p.L279R	T	24.2	0.00E+00	0.00E+00	6.10E-09	3.90E-01	.	.	Not available								
+F1221	chr17:77402367:C>T	SEPTIN9	De novo	misD	NM_001113491	c.C385T	p.R129W	T	23.8	7.23E-05	7.23E-05	1.00E+00	1.98E+00	.	.	Hypotonic								
+F1222	chr5:94520503:C>T	KIAA0825	De novo	mis	NM_173665	c.G715A	p.V239I	T	0.052	0.00E+00	0.00E+00	2.37E-24	1.50E+00	.	.	Hypotonic 								
+F1223	chr11:57542762:G>A	SMTNL1	De novo	syn	NM_001105565	c.G120A	p.K40K	.	0.62	0.00E+00	0.00E+00	8.39E-13	6.15E-01	.	.	Ataxic 								
+F1223	chrX:105909787:G>GAA	NRK	De novo	frameshift insertion	NM_198465	c.2146_2147insAA	p.L717Nfs*5	.	23	0.00E+00	0.00E+00	.	.	.	.	Ataxic 								
+F1224	chr19:14120583:G>T	ASF1B	De novo	mis	NM_018154	c.C485A	p.A162D	T	9.605	0.00E+00	0.00E+00	2.43E-02	8.75E-01	.	.	Spastic								
+F1226	chr5:150676761:C>CA	MYOZ3	De novo	frameshift insertion	NM_133371	c.643dupA	p.T215Nfs*30	.	23	0.00E+00	0.00E+00	2.14E-05	3.44E-01	.	.	Dyskinetic-Dystonia								
+F1227	chr14:61768684:G>C	SNAPC1	De novo	misD	NM_003082	c.G478C	p.E160Q	T	26.3	0.00E+00	0.00E+00	2.28E-04	-6.02E-01	.	.	Hypotonic 								
+F1228	chr9:85619022:T>C	AGTPBP1	De novo	misD	NM_015239	c.A2176G	p.I726V	T	23.4	0.00E+00	0.00E+00	4.37E-04	1.87E+00	.	.	Hypotonic								
+F1229	chr16:85634099:C>T	GSE1	De novo	misD	NM_014615	c.C193T	p.R65C	T	29.2	1.31E-05	1.31E-05	1.00E+00	-5.41E+00	.	.	Dyskinetic-Dystonia								
+F1230	chr2:181678092:A>G	NEUROD1	De novo	misD	NM_002500	c.T769C	p.F257L	T	25.4	0.00E+00	0.00E+00	4.15E-01	1.05E+00	.	.	Spastic								
+F1230	chr5:113434295:G>A	TSSK1B	De novo	misD	NM_032028	c.C545T	p.A182V	T	22.1	3.29E-05	3.29E-05	3.04E-02	5.21E-01	.	.	Spastic								
+F1231	chr13:28345533:T>A	FLT1	De novo	mis	NM_002019	c.A2267T	p.N756I	T	18.28	0.00E+00	0.00E+00	1.00E+00	1.94E+00	.	.	Dyskinetic-Dystonia								
+F1231	chr2:84812371:G>C	DNAH6	De novo	misD	NM_001370	c.G11770C	p.A3924P	T	25.7	0.00E+00	0.00E+00	1.37E-56	3.42E+00	.	.	Dyskinetic-Dystonia								
+F1234	chr11:115217902:C>T	CADM1	De novo	misD	NM_014333	c.G811A	p.G271R	D	27.6	0.00E+00	0.00E+00	1.00E+00	2.79E+00	.	.	Spastic								
+F1234	chr5:139394029:C>T	PROB1	De novo	syn	NM_001161546	c.G1053A	p.Q351Q	.	5.462	0.00E+00	0.00E+00	.	-1.31E+00	.	.	Spastic								
+F1235	chr15:40206370:G>A	BUB1B	De novo	misD	NM_001211	c.G1921A	p.E641K	T	21.9	0.00E+00	0.00E+00	2.58E-14	1.78E+00	.	.	Spastic								
+F1235	chr19:15255448:G>C	BRD4	De novo	syn	NM_058243	c.C1896G	p.R632R	.	0.688	0.00E+00	0.00E+00	1.00E+00	2.63E+00	.	.	Spastic								
+F1242	chr6:24205117:A>G	DCDC2	De novo	mis	NM_016356	c.167T>C	p.V56A	T	10.28	0.00E+00	0.00E+00	1.18E-09	5.84E-01	.	.	Hypotonic								
+F1243	chr12:50430510:C>T	LARP4	De novo	misD	NM_001352324	c.C128T	p.A43V	T	23.4	0.00E+00	0.00E+00	9.98E-01	1.05E+00	.	.	Not available 								
+F1244	chr3:138464501:A>G	ESYT3	De novo	misD	NM_031913	c.A1072G	p.N358D	D	26.8	0.00E+00	0.00E+00	2.34E-30	1.84E-01	.	.	Spastic								
+F1245	chr1:213008256:A>C	ANGEL2	De novo	misD	NM_144567	c.T596G	p.F199C	D	29.6	0.00E+00	0.00E+00	5.40E-06	1.46E+00	.	.	Dyskinetic-Dystonia								
+F1247	chr8:144440440:C>T	TONSL	De novo	misD	NM_013432	c.G1201A	p.E401K	T	24.8	0.00E+00	0.00E+00	2.67E-33	-1.20E+00	.	.	Ataxic								
+F1251	chr6:85574308:G>A	SNX14	De novo	misD	NM_001350532	c.C274T	p.P92S	T	24	0.00E+00	0.00E+00	4.28E-12	1.58E+00	.	.	Spastic								
+F1252	chr1:147908241:G>C	GJA8	De novo	misD	NM_005267	c.G286C	p.A96P	D	26	0.00E+00	0.00E+00	1.26E-05	-3.50E-01	.	.	Hypotonic								
+F1255	chr11:31793787:G>A	PAX6	De novo	stopgain	NM_001368893	c.C823T	p.R275X	.	40	0.00E+00	0.00E+00	1.00E+00	3.29E+00	.	.	Ataxic								
+F1256	chr1:155062300:A>G	ADAM15	De novo	mis	NM_207197	c.A2480G	p.Q827R	T	19.13	0.00E+00	0.00E+00	1.04E-14	1.68E+00	.	.	Spastic								
+F1256	chr4:139266837:T>C	MGARP	De novo	mis	NM_032623	c.A485G	p.D162G	T	16.56	0.00E+00	0.00E+00	1.60E-03	7.62E-01	.	.	Spastic								
+F1260	chr2:94873535:C>T	TEKT4	De novo	misD	NM_144705	c.C514T	p.R172W	T	23.6	3.94E-05	3.94E-05	9.04E-12	-2.30E+00	.	.	Hypotonic								
+F1261	chr8:138139064:C>T	FAM135B	De novo	misD	NM_015912	c.G3823A	p.G1275R	T	26.4	3.29E-05	3.29E-05	1.00E+00	1.61E+00	.	.	Hypotonic 								
+F1262	chr9:127660034:T>A	STXBP1	De novo	misD	NM_003165	c.T251A	p.V84D	D	26.7	0.00E+00	0.00E+00	1.00E+00	5.85E+00	Yes	Known	Not available 								
+F1262	chr18:72538756:C>T	CBLN2	De novo	misD	NM_182511	c.G374A	p.G125D	T	32	0.00E+00	0.00E+00	2.93E-02	6.37E-01	.	.	Not available 								
+F1262	chr1:206934446:A>G	PIGR	De novo	misD	NM_002644	c.T1679C	p.V560A	T	23.5	0.00E+00	0.00E+00	1.00E+00	1.57E+00	.	.	Not available 								
+F1262	chr5:138427315:C>A	KDM3B	De novo	syn	NM_016604	c.C4629A	p.A1543A	.	12.12	0.00E+00	0.00E+00	1.00E+00	6.23E+00	.	.	Not available 								
+F1264	chr19:11061782:A>C	SMARCA4	De novo	splicing	NM_001128844	c.4912-2A>C	.	.	34	0.00E+00	8.55E-05	1.00E+00	8.81E+00	Yes	Known	Not available 								
+F1264	chr10:128112315:C>T	MKI67	De novo	mis	NM_002417	c.G1787A	p.R596H	T	17.38	6.57E-06	6.57E-06	6.74E-18	6.34E-01	.	.	Not available 								
+F1264	chr11:18483874:T>A	TSG101	De novo	misD	NM_006292	c.A839T	p.E280V	T	32	0.00E+00	0.00E+00	1.19E-01	2.06E+00	.	.	Not available 								
+F1264	chr1:33493437:G>A	ZSCAN20	De novo	syn	NM_145238	c.G1695A	p.L565L	.	9.231	0.00E+00	0.00E+00	8.34E-01	2.34E+00	.	.	Not available 								
+F1265	chr12:52795971:G>A	KRT3	De novo	syn	NM_057088	c.C72T	p.S24S	.	0.041	1.58E-04	1.58E-04	1.83E-08	1.09E-01	.	.	Ataxic								
+F1266	chr1:46034864:TCAC>T	MAST2	De novo	nonframeshift deletion	NM_001324320	c.4217_4219del	p.P1407del	.	18.35	0.00E+00	0.00E+00	1.38E-06	2.10E+00	.	.	Ataxic 								
+F1267	chr2:5692836:C>A	SOX11	De novo	misD	NM_003108	c.C115A	p.P39T	D	23.8	0.00E+00	0.00E+00	8.65E-02	1.49E+00	Yes	Known	Hypotonic 								
+F1267	chr2:5693046:C>G	SOX11	De novo	misD	NM_003108	c.C325G	p.H109D	D	27.5	0.00E+00	0.00E+00	8.65E-02	1.49E+00	.	.	Hypotonic 								
+F1268	chr4:2928371:G>A	ADD1	De novo	mis	NM_001354761	c.G2248A	p.V750M	T	13.5	0.00E+00	0.00E+00	1.00E+00	1.13E+00	.	.	Hypotonic								
+F1269	chr12:50992315:G>A	SLC11A2	De novo	misD	NM_001174129	c.C1222T	p.R408C	T	32	6.57E-06	6.57E-06	8.64E-07	2.78E+00	.	.	Spastic								
+F1269	chr2:99554335:C>A	AFF3	De novo	misD	NM_002285	c.G3535T	p.D1179Y	D	29	0.00E+00	0.00E+00	1.00E+00	2.27E+00	.	.	Spastic								
+F1270	chr16:85918629:G>A	IRF8	De novo	misD	NM_002163	c.G814A	p.G272R	D	29	0.00E+00	0.00E+00	9.94E-01	1.33E+00	.	.	Ataxic 								
+F1314	chr3:158203145:C>T	RSRC1	De novo	misD	NM_016625	c.C394T	p.R132W	T	23	5.92E-05	5.92E-05	4.10E-05	-2.20E-01	.	.	Hypotonic 								
+F1316	chr12:108919747:C>T	SVOP	De novo	misD	NM_018711	c.G1196A	p.R399H	.	29.2	3.29E-05	3.29E-05	1.00E+00	2.43E+00	.	.	Other								
+F1316	chr17:34632749:C>T	TMEM132E	De novo	stopgain	NM_001304438	c.C1528T	p.R510X	.	37	0.00E+00	0.00E+00	1.37E-11	4.93E-01	.	.	Other								
+F1316	chr7:5603353:A>C	FSCN1	De novo	misD	NM_003088	c.A929C	p.H310P	T	24.2	0.00E+00	0.00E+00	9.74E-01	2.03E+00	.	.	Other								
+F1316	chr8:42548748:G>A	SMIM19	De novo	misD	NM_138436	c.G227A	p.R76H	T	26.3	0.00E+00	0.00E+00	2.42E-01	-2.71E-02	.	.	Other								
+F1317	chr3:49174764:G>A	KLHDC8B	De novo	syn	NM_173546	c.G564A	p.P188P	.	5.536	2.69E-04	2.69E-04	3.16E-05	1.46E+00	.	.	Hypotonic 								
+F1317	chr8:22618928:G>A	CCAR2	De novo	misD	NM_021174	c.G2434A	p.V812M	T	24	6.57E-06	6.57E-06	1.00E+00	8.36E-01	.	.	Hypotonic 								
+F1327	chr4:76003636:G>A	CXCL9	De novo	stopgain	NM_002416	c.C340T	p.R114X	.	32	6.04E-05	5.91E-05	2.03E-02	4.28E-01	.	.	Spastic								
+F1327	chr19:13937866:G>A	PODNL1	De novo	syn	NM_024825	c.C144T	p.V48V	.	0.25	1.51E-05	2.62E-05	2.92E-16	-1.57E+00	.	.	Spastic								
+F260	chr14:45188956:G>A	FANCM	De novo	mis	NM_020937	c.G4934A	p.R1645H	T	10.3	5.92E-05	5.92E-05	2.40E-13	7.00E-01	.	.	Dyskinetic-Dystonia								
+F260	chr1:11240432:G>A	MTOR	De novo	misD	NM_004958	c.C1657T	p.R553C	T	26.7	0.00E+00	0.00E+00	1.00E+00	9.51E+00	.	.	Dyskinetic-Dystonia								
+F264	chr8:23007627:G>A	RHOBTB2	De novo	misD	NM_001160036	c.G1448A	p.R483H	T	31	0.00E+00	0.00E+00	8.51E-07	3.12E+00	.	.	Hypotonic								
+F268	chr10:71741733:A>C	CDH23	De novo	misD	NM_022124	c.A4657C	p.T1553P	D	25.6	0.00E+00	0.00E+00	1.32E-13	1.45E+00	.	.	Hypotonic								
+F268	chr12:70346184:A>C	CNOT2	De novo	misD	NM_001199302	c.A1396C	p.N466H	T	24.2	0.00E+00	0.00E+00	1.00E+00	3.21E+00	.	.	Hypotonic								
+F268	chr19:17240761:T>G	NR2F6	De novo	misD	NM_005234	c.A283C	p.N95H	D	27.1	0.00E+00	0.00E+00	8.73E-07	-9.76E-01	.	.	Hypotonic								
+F268	chr2:202724998:C>G	FAM117B	De novo	misD	NM_173511	c.C835G	p.Q279E	T	24.5	0.00E+00	0.00E+00	1.21E-03	1.11E-01	.	.	Hypotonic								
+F269	chr11:33591261:A>G	KIAA1549L	De novo	misD	NM_012194	c.A4591G	p.K1531E	D	29.4	0.00E+00	0.00E+00	1.15E-14	2.12E+00	.	.	Other								
+F269	chr9:5763237:T>C	RIC1	De novo	misD	NM_020829	c.T2210C	p.L737P	D	29.5	0.00E+00	0.00E+00	5.45E-04	1.70E-01	.	.	Other								
+F275	chr15:23567113:A>G	MKRN3	De novo	mis	NM_005664	c.A1331G	p.Q444R	T	13.85	0.00E+00	0.00E+00	2.83E-01	-7.14E-01	.	.	Spastic 								
+F279	chr14:28768317:T>A	FOXG1	De novo	syn	NM_005249	c.T1038A	p.T346T	.	13.41	0.00E+00	0.00E+00	9.98E-01	3.80E+00	Yes	Known	"Dyskinetic-chorea, athetosis, and/or ballism"								
+F279	chr12:55967876:A>G	CDK2	De novo	misD	NM_052827	c.A136G	p.S46G	T	29.3	0.00E+00	0.00E+00	9.97E-01	2.63E+00	.	.	"Dyskinetic-chorea, athetosis, and/or ballism"								
+F279	chr14:28768318:C>T	FOXG1	De novo	stopgain	NM_005249	c.C1039T	p.Q347X	.	37	0.00E+00	0.00E+00	9.98E-01	3.80E+00	.	.	"Dyskinetic-chorea, athetosis, and/or ballism"								
+F279	chr1:19084677:T>C	UBR4	De novo	syn	NM_020765	c.A14835G	p.E4945E	.	1.463	0.00E+00	0.00E+00	1.00E+00	8.44E+00	.	.	"Dyskinetic-chorea, athetosis, and/or ballism"								
+F279	chr4:1959626:C>T	NSD2	De novo	syn	NM_133330	c.C3141T	p.P1047P	.	2.634	5.26E-05	5.26E-05	1.00E+00	5.67E+00	.	.	"Dyskinetic-chorea, athetosis, and/or ballism"								
+F282	chr20:38748855:T>A	ACTR5	De novo	splicing	NM_024855	c.375+2T>A	.	.	35	0.00E+00	0.00E+00	1.23E-12	-1.66E-01	.	.	"Dyskinetic-chorea, athetosis, and/or ballism"								
+F521	chr15:77030567:C>G	PSTPIP1	De novo	misD	NM_001321137	c.C823G	p.R275G	T	22.7	0.00E+00	0.00E+00	1.43E-24	-1.55E+00	.	.	Dyskinetic-Dystonia								
+F521	chr1:180190485:C>T	QSOX1	De novo	misD	NM_002826	c.C1193T	p.P398L	T	25.9	1.97E-05	1.97E-05	1.95E-04	6.98E-02	.	.	Dyskinetic-Dystonia								
+F521	chr2:15603252:C>T	DDX1	De novo	misD	NM_004939	c.C452T	p.T151I	D	23.9	0.00E+00	0.00E+00	1.00E+00	1.28E+00	.	.	Dyskinetic-Dystonia								
+F521	chr5:176290475:G>T	SIMC1	De novo	mis	NM_001308196	c.G894T	p.Q298H	T	17.29	0.00E+00	0.00E+00	2.59E-14	1.64E+00	.	.	Dyskinetic-Dystonia								
+F523	chr22:50721443:C>T	SHANK3	De novo	stopgain	NM_033517	c.C3568T	p.Q1190X	.	40	0.00E+00	0.00E+00	1.00E+00	-1.37E+00	Yes	Known	Hypotonic								
+F774	chr10:68341811:C>G	HNRNPH3	De novo	stopgain	NM_021644	c.C879G	p.Y293X	.	36	0.00E+00	0.00E+00	9.99E-01	2.15E+00	.	.	Dyskinetic-Dystonia								
+F775	chr11:68033239:C>G	NDUFS8	De novo	misD	NM_002496	c.C328G	p.R110G	D	29.9	0.00E+00	0.00E+00	3.42E-02	1.13E+00	.	.	Spastic								
+F775	chr19:50250542:C>A	MYH14	De novo	misD	NM_001145809	c.C1684A	p.L562M	D	24.9	0.00E+00	0.00E+00	5.39E-16	1.38E+00	.	.	Spastic								
+F775	chr2:142918682:A>T	KYNU	De novo	misD	NM_001199241	c.A243T	p.K81N	T	24.4	0.00E+00	0.00E+00	6.80E-06	9.81E-02	.	.	Spastic								
+F779	chr1:12007168:G>A	MFN2	De novo	misD	NM_014874	c.G1988A	p.R663H	D	25.3	1.31E-05	1.31E-05	5.65E-04	3.23E+00	.	.	Spastic								
+F779	chr6:7910758:G>A	TXNDC5	De novo	mis	NM_030810	c.C19T	p.R7C	T	18.11	0.00E+00	0.00E+00	3.31E-09	2.48E-01	.	.	Spastic								
+F780	chr8:102280444:C>T	UBR5	De novo	misD	NM_015902	c.G5951A	p.G1984D	T	23.1	0.00E+00	0.00E+00	1.00E+00	8.38E+00	.	.	Spastic								
+F781	chr19:8979358:G>C	MUC16	De novo	mis	NM_024690	c.C1781G	p.S594C	T	9.476	0.00E+00	0.00E+00	9.99E-149	-4.95E+00	.	.	Spastic								
+F782	chr19:36627127:T>C	ZNF382	De novo	syn	NM_032825	c.T1230C	p.C410C	.	10.74	6.57E-06	6.57E-06	7.44E-03	1.90E+00	.	.	Spastic								
+F783	chr13:109046921:G>A	MYO16	De novo	misD	NM_015011	c.G2736A	p.M912I	T	21.7	6.58E-06	6.58E-06	1.70E-06	-2.71E-01	.	.	Spastic								
+F783	chr16:87711274:G>A	KLHDC4	De novo	syn	NM_017566	c.C1005T	p.Y335Y	.	0.035	1.31E-05	1.31E-05	5.20E-30	-3.70E+00	.	.	Spastic								
+F783	chr19:43554681:G>A	XRCC1	De novo	misD	NM_006297	c.C379T	p.R127W	T	28	6.58E-06	6.58E-06	2.27E-10	5.72E-01	.	.	Spastic								
+F784	chr17:3658112:G>A	CTNS	De novo	syn	NM_004937	c.G789A	p.L263L	.	10.84	0.00E+00	0.00E+00	2.01E-05	7.68E-01	.	.	Ataxic								
+F784	chr3:87991653:T>C	HTR1F	De novo	misD	NM_001322210	c.T904C	p.F302L	D	28.4	0.00E+00	0.00E+00	1.21E-04	1.03E+00	.	.	Ataxic								
+F785	chr1:62443226:C>T	USP1	De novo	misD	NM_003368	c.C464T	p.S155L	T	27	0.00E+00	0.00E+00	1.00E+00	1.88E+00	.	.	Spastic								
+F787	chr17:55320868:G>A	HLF	De novo	misD	NM_002126	c.G877A	p.G293R	T	28.1	0.00E+00	0.00E+00	9.87E-01	1.79E+00	.	.	Dyskinetic-Dystonia								
+F789	chr19:11447725:G>A	PRKCSH	De novo	syn	NM_002743	c.G1041A	p.P347P	.	0.482	6.57E-06	6.57E-06	1.47E-06	5.62E-01	.	.	Spastic								
+F789	chr7:126769980:G>A	GRM8	De novo	syn	NM_001371083	c.C1242T	p.Y414Y	.	2.109	1.97E-05	1.97E-05	2.37E-04	1.37E+00	.	.	Spastic								
+F792	chr14:24240567:T>C	TINF2	De novo	mis	NM_012461	c.A913G	p.S305G	T	7.392	2.63E-05	2.63E-05	1.10E-03	1.38E+00	.	.	Hypotonic								
+F793	chr16:2974552:G>A	PKMYT1	De novo	misD	NM_182687	c.C977T	p.A326V	T	23	0.00E+00	0.00E+00	2.61E-10	-7.67E-01	.	.	Dyskinetic-Dystonia								
+F793	chr8:144413539:T>C	SLC39A4	De novo	mis	NM_130849	c.A1448G	p.N483S	T	1.989	0.00E+00	0.00E+00	2.48E-05	-2.10E-01	.	.	Dyskinetic-Dystonia								
+F794	chr9:17135275:G>C	CNTLN	De novo	syn	NM_017738	c.G210C	p.G70G	.	4.696	5.91E-05	5.91E-05	2.72E-13	-2.50E+00	.	.	Spastic								
+F795	chr11:45244138:T>C	SYT13	De novo	mis	NM_001247987	c.A763G	p.T255A	T	8.359	0.00E+00	0.00E+00	1.76E-03	9.20E-01	.	.	Ataxic								
+F796	chr7:2543274:G>A	BRAT1	De novo	mis	NM_152743	c.C853T	p.R285W	T	15.27	6.57E-06	6.57E-06	1.48E-28	-2.12E+00	.	.	Dyskinetic-Dystonia								
+F798	chr2:101252967:G>T	CNOT11	De novo	startloss	NM_017546	c.G3T	p.M1?	T	23.6	6.57E-06	6.57E-06	7.74E-01	1.65E+00	.	.	Dyskinetic-Dystonia								
+F800	chr15:71899911:T>G	MYO9A	De novo	misD	NM_006901	c.A3246C	p.Q1082H	D	15.24	0.00E+00	0.00E+00	1.00E+00	2.76E+00	.	.	Not available 								
+F801	chr19:1080947:C>G	ARHGAP45	De novo	misD	NM_012292	c.C2073G	p.F691L	T	23.6	0.00E+00	0.00E+00	5.74E-11	-1.10E+00	.	.	Ataxic								
+F801	chr1:27360241:C>A	MAP3K6	De novo	misD	NM_004672	c.G2182T	p.G728C	T	37	0.00E+00	0.00E+00	1.51E-24	1.01E+00	.	.	Ataxic								
+F807	chr2:11143970:G>A	C2orf50	De novo	syn	NM_182500	c.G348A	p.S116S	.	10.69	5.91E-05	5.91E-05	2.30E-07	-5.41E-01	.	.	Hypotonic 								
+F807	chr4:9996936:G>A	SLC2A9	De novo	syn	NM_001001290	c.C168T	p.I56I	.	15.96	0.00E+00	0.00E+00	4.90E-11	-2.33E-01	.	.	Hypotonic 								
+F808	chr7:82956760:G>GA	PCLO	De novo	frameshift insertion	NM_033026	c.4192dupT	p.S1398Ffs*14	.	33	0.00E+00	0.00E+00	1.00E+00	4.19E-01	.	.	Dyskinetic-Dystonia								
+F809	chr10:103091577:C>G	NT5C2	De novo	misD	NM_001351187	c.G625C	p.A209P	T	29.5	0.00E+00	0.00E+00	1.04E-07	2.46E+00	.	.	Spastic								
+F809	chr1:10660343:C>T	CASZ1	De novo	syn	NM_017766	c.G699A	p.R233R	.	6.703	0.00E+00	0.00E+00	1.00E+00	2.03E+00	.	.	Spastic								
+F809	chr1:17259626:C>T	PADI3	De novo	syn	NM_016233	c.C141T	p.G47G	.	0.304	2.63E-05	2.63E-05	6.54E-12	1.10E+00	.	.	Spastic								
+F810	chr10:3165429:G>A	PITRM1	De novo	misD	NM_014889	c.C517T	p.R173C	T	25.5	1.97E-05	1.97E-05	3.05E-20	-1.59E+00	.	.	Hypotonic								
+F810	chr3:64602199:A>C	ADAMTS9	De novo	misD	NM_182920	c.T3762G	p.C1254W	D	24	0.00E+00	0.00E+00	8.69E-01	1.53E+00	.	.	Hypotonic								
+F810	chr9:90613420:C>T	DIRAS2	De novo	syn	NM_017594	c.G408A	p.A136A	.	1.676	1.31E-05	1.31E-05	4.64E-01	1.92E+00	.	.	Hypotonic								
+F813	chr5:100895747:C>T	ST8SIA4	De novo	mis	NM_175052	c.G152A	p.S51N	T	17.48	0.00E+00	0.00E+00	9.75E-02	2.25E+00	.	.	Hypotonic 								
+F814	chr4:1823119:G>C	LETM1	De novo	misD	NM_012318	c.C1345G	p.Q449E	T	22	0.00E+00	0.00E+00	1.37E-11	1.71E+00	.	.	Dyskinetic-Dystonia								
+F814	chr4:76755154:G>A	SHROOM3	De novo	syn	NM_020859	c.G4671A	p.A1557A	.	0.081	1.98E-04	1.98E-04	1.00E+00	8.75E-01	.	.	Dyskinetic-Dystonia								
+F815	chr13:77263678:C>T	MYCBP2	De novo	misD	NM_015057	c.G1543A	p.D515N	T	25.9	0.00E+00	0.00E+00	1.00E+00	7.67E+00	.	.	Hypotonic 								
+F815	chr2:162384925:C>T	KCNH7	De novo	misD	NM_033272	c.G2725A	p.D909N	D	23.1	0.00E+00	0.00E+00	9.05E-01	3.84E+00	.	.	Hypotonic 								
+F815	chr4:158706835:C>T	ETFDH	De novo	stopgain	NM_004453	c.C1675T	p.R559X	.	42	6.57E-06	6.57E-06	8.45E-06	4.98E-01	.	.	Hypotonic 								
+F816	chr17:413182:G>A	C17orf97	De novo	syn	NM_001013672	c.G339A	p.P113P	.	0.838	3.94E-05	3.94E-05	5.94E-07	7.80E-01	.	.	Dyskinetic-Dystonia								
+F818	chr13:38697725:A>G	FREM2	De novo	misD	NM_207361	c.A5201G	p.Y1734C	D	29	0.00E+00	0.00E+00	2.34E-11	8.85E-01	.	.	Spastic								
+F818	chr5:141431901:A>T	PCDHGA12	De novo	mis	NM_032094	c.A1142T	p.Q381L	T	17.7	0.00E+00	0.00E+00	3.05E-10	6.64E-01	.	.	Spastic								
+F819	chr2:165389810:G>A	SCN2A	De novo	misD	NM_001040143	c.G6004A	p.E2002K	D	24.7	1.31E-05	1.31E-05	1.00E+00	8.73E+00	.	.	Spastic								
+F819	chr4:3249409:G>A	MSANTD1	De novo	misD	NM_001330620	c.G148A	p.D50N	T	22.5	6.57E-06	6.57E-06	4.14E-01	-1.15E-01	.	.	Spastic								
+F819	chr5:140928651:G>A	PCDHAC1	De novo	misD	NM_031882	c.G1759A	p.D587N	D	27.3	0.00E+00	0.00E+00	7.35E-10	1.32E+00	.	.	Spastic								
+F820	chr1:165411067:C>T	RXRG	De novo	mis	NM_001256570	c.G296A	p.S99N	T	12.27	0.00E+00	0.00E+00	6.64E-01	2.57E+00	.	.	Dyskinetic-Dystonia								
+F821	chr19:40389740:C>T	HIPK4	De novo	misD	NM_144685	c.G163A	p.E55K	T	23.4	0.00E+00	0.00E+00	1.12E-05	1.79E+00	.	.	Dyskinetic-Dystonia								
+F821	chr2:222930777:G>C	ACSL3	De novo	misD	NM_004457	c.G1697C	p.G566A	T	28	0.00E+00	0.00E+00	1.07E-02	2.51E+00	.	.	Dyskinetic-Dystonia								
+F821	chr4:185019686:C>G	HELT	De novo	mis	NM_001300781	c.327C>G	p.Ser109Arg	T	3.109	0.00E+00	0.00E+00	6.81E-02	-9.00E-01	.	.	Dyskinetic-Dystonia								
+F822	chr17:8490458:G>A	MYH10	De novo	misD	NM_001256012	c.C4766T	p.T1589M	D	28.8	2.63E-05	2.63E-05	1.00E+00	6.44E+00	.	.	Spastic								
+F822	chr7:128838351:G>A	FLNC	De novo	misD	NM_001458	c.G1132A	p.V378M	D	28.7	0.00E+00	0.00E+00	1.00E+00	6.09E+00	.	.	Spastic								
+F837	chr8:60862337:G>C	CHD7	De novo	splicing	NM_001316690	c.1824+1G>C	.	.	34	0.00E+00	0.00E+00	1.00E+00	1.18E+00	Yes	Known	Hypotonic 								
+F837	chr6:149793616:A>G	PCMT1	De novo	misD	NM_005389	c.A539G	p.N180S	T	25.5	0.00E+00	0.00E+00	1.20E-02	3.69E-01	.	.	Hypotonic 								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
