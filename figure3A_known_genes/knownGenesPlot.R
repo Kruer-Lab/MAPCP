@@ -1,13 +1,15 @@
 library(tidyverse)
 library(RColorBrewer)
 
+setwd("E:\\ASU Dropbox\\Peter Skidmore\\KruerLab\\MAPCP\\knownGenePlot\\")
+
 denovo <- read.csv("MAPCP_Variants_Table_03.01.2025_FINAL_denovo.tsv", sep='\t')
 recessive <- read.csv("MAPCP_Variants_Table_03.01.2025_FINAL_recessive.tsv", sep='\t')
 
 # Only keep known top candidates
 denovo <- denovo[denovo$Top.Candidate=="Yes",]
 recessive <- recessive[recessive$Top.Candidate=="Yes",]
-recessive <- recessive[grepl("Known", recessive$Gene.Category),]
+recessive <- recessive[!grepl("Novel", recessive$Gene.Category),]
 
 # Sanity check for duplicate samples
 denovo$ID %in% recessive$ID
@@ -37,7 +39,7 @@ merged$PredominantMotorDisorder <- factor(merged$PredominantMotorDisorder,
                                                      "Ataxic", "Dyskinetic-Dystonia",
                                                      "Hypotonic", "Spastic"))
 
-# Colorblind friendly palette
+# Okabe-Ito colorblind friendly
 color_palette <- c("#D55E00", "#0072B2", "#F0E442", "#009E73", "#56B4E9", "#E69F00")
 
 ggplot(merged, aes(fill=PredominantMotorDisorder, x=Type)) +
@@ -61,3 +63,18 @@ ggplot(merged, aes(fill=PredominantMotorDisorder, x=Type)) +
   )
 
 # Save as png 800x600
+
+#### Circular plot testing ####
+# Circular bar plot
+ggplot(merged, aes(fill=PredominantMotorDisorder, x=Type)) +
+  geom_bar(position="dodge", stat="count") +
+  theme_minimal() +
+  ylim(0, 40) +
+  coord_polar(start = 0)
+
+
+ggplot(merged, aes(fill=PredominantMotorDisorder, x=Type)) +
+  geom_bar(position="fill", stat="count") +
+  theme_minimal() +
+  ylim(0, 1) +
+  coord_polar(start = 0)
