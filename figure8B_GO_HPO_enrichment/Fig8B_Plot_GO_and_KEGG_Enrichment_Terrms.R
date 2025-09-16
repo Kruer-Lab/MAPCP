@@ -4,8 +4,6 @@ library(ggplot2)
 library(dplyr)
 library(ggpubr)
 
-# Note to Peter: Datasets for plotting made available in Supplementary Tables (not numbered yet). Filenames used here are original table names
-
 ## For Plotting GO Term Enrichments from DAVID Overrepresentation Analysis ##
 GOTermsDf=read.csv("Data/mapcp/mapcp_GO_Pathway_analyses/DAVID_TopRecessiveCausativeGenes_GOTerms_04222025.csv") # GO Terms Data from DAVID will go here
 GOTermsDf_sorted = GOTermsDf[order(GOTermsDf$PValue),]
