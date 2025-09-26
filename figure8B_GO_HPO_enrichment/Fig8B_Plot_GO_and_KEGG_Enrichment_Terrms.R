@@ -5,8 +5,6 @@ library(dplyr)
 library(ggpubr)
 library(readxl)
 
-# Note to Peter: Datasets for plotting made available in Supplementary Tables (not numbered yet). 
-# Filenames used here are original table names
 
 ## For Plotting GO Term Enrichments from DAVID Overrepresentation Analysis ##
 GOTermsDf=read_excel("/path/to/directory/SupplementaryTables_Revised.xlsx", sheet = "Supplementary Table 15", skip=1, col_names = TRUE) # Change /path/to/directory to where the supplemental file is
